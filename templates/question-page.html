@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Start Quizzing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename= 'question/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename= 'question/css/portfolio-item.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='variables.js') }}"></script> -->
+
+  </head>
+
+  <body onload="load()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">QuizMaster</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Topic      
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3">Question</h3>
+          <p id="que"></p>
+          <div class="radio">
+            <input type="radio" name="optradio" id="r1" checked><label id="op1"></label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="optradio" id="r2"><label id="op2"></label>
+          </div>
+          <div class="radio disabled">
+           <input type="radio" name="optradio" id="r3"><label id="op3"></label>
+          </div> 
+           <div>
+           <br>
+           <br>
+        <button type="button" class="btn btn-primary" onclick="ques_submit()">Submit</button>
+     
+        <button type="button" class="btn btn-primary" onclick="end_quiz(1)">End Quiz</button>
+      </div>
+        </div>
+
+     
+
+      </div>
+      <!-- /.row -->
+
+
+      
+      <!-- Related Projects Row -->
+      
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='question/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='question/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  </body>
+
+</html>
